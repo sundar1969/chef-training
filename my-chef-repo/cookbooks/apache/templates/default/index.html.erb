@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <h1>Welcome to <%= node["motd"]["company"] %></h1>
+    <h2>We love <%= @site_name %></h2>
+    <%= node["ipaddress"] %>:<%= @port %>
+    <%= node["fqdn"] %> <%= node["machinename"] %>
+    <%= node["chef_packages"] %> <%= node["languages"] %>
+  </body>
+</html>
