@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: centos65
+    driver_config:
+      box: /usr/local/boxes/centos65.box
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apache::default]
+    attributes:
+      motd:
+        company: Chef
